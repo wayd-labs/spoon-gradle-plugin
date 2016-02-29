@@ -115,6 +115,10 @@ class SpoonPlugin implements Plugin<Project> {
         }
         output = new File(outputBase, projectOutput.dirName)
 
+        sequential = false
+        if (config.sequential) {
+           sequential = config.sequential
+        }
         debug = config.debug
         ignoreFailures = config.ignoreFailures
         devices = config.devices

@@ -4,6 +4,7 @@ buildscript {
   }
   dependencies {
     classpath 'org.gradle.api.plugins:gradle-nexus-plugin:0.3'
+  classpath group: 'com.layer', name: 'gradle-git-repo-plugin', version: '2.0.2'
   }
 }
 
@@ -11,8 +12,8 @@ apply plugin: 'groovy'
 apply plugin: 'nexus'
 apply plugin: 'project-report'
 
-group = 'com.stanfy.spoon'
-version = '1.0.5-SNAPSHOT'
+group = 'com.github.wayd-labs'
+version = '1.0.5'
 
 jar {
   manifest {

@@ -4,6 +4,8 @@ package com.stanfy.spoon.gradle
  * Spoon extension.
  */
 class SpoonExtension {
+  /** non parallel tests */
+  boolean sequential
 
   /** Debug logging flag. */
   boolean debug

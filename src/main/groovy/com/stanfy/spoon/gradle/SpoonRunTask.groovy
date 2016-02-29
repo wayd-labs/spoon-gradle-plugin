@@ -40,6 +40,8 @@ class SpoonRunTask extends DefaultTask implements VerificationTask {
   /** If true, tests will fail if no devices are connected. */
   boolean failIfNoDeviceConnected
 
+  boolean sequential
+
   /** Debug logging switcher. */
   boolean debug
   
@@ -126,7 +128,7 @@ class SpoonRunTask extends DefaultTask implements VerificationTask {
         .setAndroidSdk(project.android.sdkDirectory)
         .setClasspath(cp)
         .setNoAnimations(noAnimations)
-
+	.setSequential(sequential)
     def instrumentationArgs = this.instrumentationArgs
     if (instrumentationArgs == null) {
       instrumentationArgs = []
